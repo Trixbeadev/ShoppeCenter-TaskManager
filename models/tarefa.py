@@ -38,6 +38,28 @@ class Tarefa:
 
     @staticmethod
     def listar():
+    @staticmethod
+    def atualizar(id, titulo, setor, prioridade, status, responsavel, prazo_entrega):
+        conexao = get_connection()
+        cursor = conexao.cursor()
+        sql = """
+        UPDATE tarefas
+        SET titulo = %s, setor = %s, prioridade = %s, status = %s, responsavel = %s, prazo_entrega = %s
+        WHERE id = %s
+        """
+        valores = (titulo, setor, prioridade, status, responsavel, prazo_entrega, id)
+        cursor.execute(sql, valores)
+        conexao.commit()
+        conexao.close()
+
+    @staticmethod
+    def excluir(id):
+        conexao = get_connection()
+        cursor = conexao.cursor()
+        cursor.execute("DELETE FROM tarefas WHERE id = %s", (id,))
+        conexao.commit()
+        conexao.close()
+
         conexao = get_connection()
         cursor = conexao.cursor(dictionary=True)
         cursor.execute("SELECT * FROM tarefas")
