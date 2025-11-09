@@ -18,8 +18,7 @@ def criar_tarefa():
 
 
 @tarefa_bp.route("/tarefas", methods=["GET"])
-def listar_tarefas():
-    return jsonify(Tarefa.listar())@tarefa_bp.route("/tarefas/<int:id>", methods=["PUT"])
+@tarefa_bp.route("/tarefas/<int:id>", methods=["PUT"])
 def atualizar_tarefa(id):
     dados = request.json
     Tarefa.atualizar(
@@ -38,5 +37,3 @@ def atualizar_tarefa(id):
 def excluir_tarefa(id):
     Tarefa.excluir(id)
     return jsonify({"message": "Tarefa excluída com sucesso!"}), 200
-
-

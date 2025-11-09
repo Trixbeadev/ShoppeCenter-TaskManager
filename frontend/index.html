@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShoppeCenter - Tarefas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="card-form">
+            <h2>📝 Nova Tarefa</h2>
+
+            <input placeholder="Título da tarefa" id="titulo">
+
+            <select id="setor">
+                <option value="" disabled selected>Selecione o setor</option>
+                <option>Marketing</option>
+                <option>Logística</option>
+                <option>Atendimento</option>
+                <option>TI</option>
+            </select>
+
+            <select id="prioridade">
+                <option value="" disabled selected>Prioridade</option>
+                <option>Alta</option>
+                <option>Média</option>
+                <option>Baixa</option>
+            </select>
+
+            <select id="status">
+                <option value="A Fazer">A Fazer</option>
+                <option value="Em Progresso">Em Progresso</option>
+                <option value="Concluído">Concluído</option>
+            </select>
+
+            <input placeholder="Responsável" id="responsavel">
+            <input type="date" id="prazo">
+
+            <button onclick="criarTarefa()">➕ Criar Tarefa</button>
+        </div>
+
+        <h2 class="lista-title">📌 Tarefas</h2>
+        <div id="lista" class="lista-tarefas"></div>
+
+    </div>
+
+<script src="script.js"></script>
+</body>
+</html>
