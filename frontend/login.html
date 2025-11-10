@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - ShoppeCenter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card-form" id="loginForm">
+            <h2>🔐 Login</h2>
+            <input type="email" id="email" placeholder="Email">
+            <input type="password" id="senha" placeholder="Senha">
+            <button onclick="fazerLogin()">Entrar</button>
+            <p class="text-center">
+                Não tem uma conta? 
+                <a href="#" onclick="mostrarCadastro()">Cadastre-se</a>
+            </p>
+        </div>
+
+        <div class="card-form" id="cadastroForm" style="display: none;">
+            <h2>📝 Cadastro</h2>
+            <input type="text" id="nomeRegistro" placeholder="Nome completo">
+            <input type="email" id="emailRegistro" placeholder="Email">
+            <input type="password" id="senhaRegistro" placeholder="Senha">
+            <button onclick="fazerCadastro()">Cadastrar</button>
+            <p class="text-center">
+                Já tem uma conta? 
+                <a href="#" onclick="mostrarLogin()">Faça login</a>
+            </p>
+        </div>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+</html>
