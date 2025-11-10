@@ -3,8 +3,8 @@ import mysql.connector
 def get_connection():
     return mysql.connector.connect(
         host="localhost",
-        user="root",
-        password="beasql",
-        database="shoppecenter",
-        port=3305
+        port=3305,                  # <-- SUA PORTA
+        user="root",               # <-- CONFIRME O USUÁRIO
+        password="beasql",               # <-- SUA SENHA DO MYSQL (se tiver, coloque aqui)
+        database="shoppecenter"    # <-- NOME DO BANCO
     )
