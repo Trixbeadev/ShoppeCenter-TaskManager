@@ -1,51 +1,90 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ShoppeCenter - Tarefas</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+<!DOCTYPE html><!DOCTYPE html>
 
-    <div class="container">
-        <div class="card-form">
-            <h2>📝 Nova Tarefa</h2>
+<html lang="pt-BR"><html lang="pt-BR">
 
-            <input placeholder="Título da tarefa" id="titulo">
+<head><head>
 
-            <select id="setor">
-                <option value="" disabled selected>Selecione o setor</option>
-                <option>Marketing</option>
-                <option>Logística</option>
-                <option>Atendimento</option>
-                <option>TI</option>
-            </select>
+    <meta charset="UTF-8">    <meta charset="UTF-8">
 
-            <select id="prioridade">
-                <option value="" disabled selected>Prioridade</option>
-                <option>Alta</option>
-                <option>Média</option>
-                <option>Baixa</option>
-            </select>
+    <meta http-equiv="refresh" content="0;url=/login.html">    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-            <select id="status">
-                <option value="A Fazer">A Fazer</option>
-                <option value="Em Progresso">Em Progresso</option>
-                <option value="Concluído">Concluído</option>
-            </select>
+    <title>Redirecionando...</title>    <title>ShoppeCenter - Tarefas</title>
 
-            <input placeholder="Responsável" id="responsavel">
-            <input type="date" id="prazo">
+</head>    <link rel="stylesheet" href="style.css">
 
-            <button onclick="criarTarefa()">➕ Criar Tarefa</button>
-        </div>
+<body></head>
 
-        <h2 class="lista-title">📌 Tarefas</h2>
-        <div id="lista" class="lista-tarefas"></div>
+    <p>Redirecionando para a página de login...</p><body>
 
+</body>
+
+</html><div class="container">
+    <div class="card-form">
+        <h2>📝 Nova Tarefa</h2>
+
+        <input placeholder="Título da tarefa" id="titulo">
+        <select id="setor">
+            <option value="" disabled selected>Selecione o setor</option>
+            <option>Marketing</option>
+            <option>Logística</option>
+            <option>Atendimento</option>
+            <option>TI</option>
+        </select>
+
+        <select id="prioridade">
+            <option value="" disabled selected>Prioridade</option>
+            <option>Alta</option>
+            <option>Média</option>
+            <option>Baixa</option>
+        </select>
+
+        <select id="status">
+            <option>A Fazer</option>
+            <option>Em Progresso</option>
+            <option>Concluído</option>
+        </select>
+
+        <input placeholder="Responsável" id="responsavel">
+        <input type="date" id="prazo">
+
+        <button onclick="criarTarefa()">➕ Criar Tarefa</button>
     </div>
+
+    <h2 class="lista-title">📌 Tarefas</h2>
+    <div id="lista" class="lista-tarefas"></div>
+</div>
+
+<!-- MODAL EDITAR -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <h2>✏ Editar Tarefa</h2>
+
+        <input id="editTitulo">
+        <select id="editSetor">
+            <option>Marketing</option>
+            <option>Logística</option>
+            <option>Atendimento</option>
+            <option>TI</option>
+        </select>
+        <select id="editPrioridade">
+            <option>Alta</option>
+            <option>Média</option>
+            <option>Baixa</option>
+        </select>
+        <select id="editStatus">
+            <option>A Fazer</option>
+            <option>Em Progresso</option>
+            <option>Concluído</option>
+        </select>
+        <input id="editResponsavel">
+        <input type="date" id="editPrazo">
+
+        <button onclick="salvarEdicao()">💾 Salvar</button>
+        <button class="btn-fechar" onclick="fecharModal()">❌ Cancelar</button>
+    </div>
+</div>
 
 <script src="script.js"></script>
 </body>
+
 </html>
